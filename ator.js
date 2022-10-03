@@ -2,11 +2,12 @@
 //codigos do ator
 
 let yAtor = 366;
+let xAtor = 100;
 
 let teclado;
 
 function Ator(){
-    image(imgAtor, 100, yAtor, 30, 30);
+    image(imgAtor, xAtor, yAtor, 30, 30);
 }
 
 addEventListener("keydown", function(event) {
