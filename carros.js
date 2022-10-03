@@ -10,16 +10,10 @@ function mostraCarros(){
 }
 
 function movimentaCarro(){
-   xCarros[0] -= velocidadeCarros[0];
-    if (xCarros[0] < -50) {
-        xCarros[0] = 600;
-    }
-    xCarros[1] -= velocidadeCarros[1];
-    if (xCarros[1] < -50) {
-        xCarros[1] = 600;
-    }
-    xCarros[2] -= velocidadeCarros[2];
-    if (xCarros[2] < -50) {
-        xCarros[2] = 600;
+    for (let i = 0; i < imgCarros.length; i++){
+        xCarros[i] -= velocidadeCarros[i];
+        if (xCarros[i] < -50) {
+            xCarros[i] = 600;
+        }
     }
 }
