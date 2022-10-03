@@ -4,9 +4,9 @@ let yCarros = [40, 96, 150];
 let velocidadeCarros = [2, 2.5, 3.2];
 
 function mostraCarros(){
-    image(imgCarro1, xCarros[0], yCarros[0], 50, 40);
-    image(imgCarro2, xCarros[1], yCarros[1], 50, 40);
-    image(imgCarro3, xCarros[2], yCarros[2], 50, 40);
+    for (let i = 0; i < imgCarros.length; i++){
+        image(imgCarros[i], xCarros[i], yCarros[i], 50, 40);
+    }
 }
 
 function movimentaCarro(){
