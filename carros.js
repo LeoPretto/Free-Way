@@ -23,15 +23,15 @@ function mostraCarros(){
 
 function movimentaCarro(){
    xCarro1 -= velocidadeCarro1;
-    if (xCarro1 < 0) {
+    if (xCarro1 < -50) {
         xCarro1 = 600;
     }
     xCarro2 -= velocidadeCarro2;
-    if (xCarro2 < 0) {
+    if (xCarro2 < -50) {
         xCarro2 = 600;
     }
     xCarro3 -= velocidadeCarro3;
-    if (xCarro3 < 0) {
+    if (xCarro3 < -50) {
         xCarro3 = 600;
     }
 }
