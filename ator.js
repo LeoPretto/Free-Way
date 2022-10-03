@@ -6,7 +6,7 @@ let xAtor = 100;
 
 let teclado;
 
-function Ator(){
+function ator(){
     image(imgAtor, xAtor, yAtor, 30, 30);
 }
 
