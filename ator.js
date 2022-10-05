@@ -4,25 +4,26 @@
 let yAtor = 366;
 let xAtor = 85;
 let colisao = false;
-let teclado;
 let meusPontos = 0;
+let teclado;
 
 function ator(){
     image(imgAtor, xAtor, yAtor, 30, 30);
 }
 
 function movimentaAtor(){
-    addEventListener("keydown", function(event) {
-        if (event.keyCode == 38){
-            yAtor -= 1;
-        }
-        if (event.keyCode == 40){
-            yAtor += 1;
-        }
-        console.log(yAtor);
-}
-)  
-    
+addEventListener("keydown", function(event) {
+        teclado = event.keyCode;
+})  
+addEventListener("keyup", function(event){
+    teclado = 0
+}) 
+    if (teclado == 38){
+        yAtor -= 3;
+    }
+    if (teclado == 40){
+        yAtor += 3;
+    }
 }
 
 function vercolisao(){
