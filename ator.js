@@ -32,7 +32,7 @@ addEventListener("keyup", function(event){
 function vercolisao(){
     //colideRectCircle (x1,y1 width1, heigth1, cx, cy, diameter)
     for (let i = 0; i < imgCarros.length; i++){
-        colisao = collideRectCircle(xCarros[i], yCarros[i], comprimentoCarro, alturaCarro, xAtor, yAtor, 15)
+        colisao = collideRectCircle(xCarros[i], yCarros[i], comprimentoCarro, alturaCarro, (xAtor+15), (yAtor+15), 28)
         if(colisao){
             somColisao.play();
             voltarPosicaoInicial();
