@@ -12,4 +12,6 @@ function draw(){
     movimentaAtor();
     vercolisao();
     pontos();
+    somTrilha.play();
+    somTrilha.loop =true;
 }

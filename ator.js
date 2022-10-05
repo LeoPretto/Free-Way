@@ -19,10 +19,10 @@ addEventListener("keyup", function(event){
     teclado = 0
 }) 
     if (teclado == 38){
-        yAtor -= 2;
+        yAtor -= 3;
     }
     if (teclado == 40){
-        yAtor += 2;
+        yAtor += 3;
     }
     if (yAtor > 366){
         yAtor = 366;
@@ -34,6 +34,7 @@ function vercolisao(){
     for (let i = 0; i < imgCarros.length; i++){
         colisao = collideRectCircle(xCarros[i], yCarros[i], comprimentoCarro, alturaCarro, xAtor, yAtor, 15)
         if(colisao){
+            somColisao.play();
             voltarPosicaoInicial();
             pontosPositivos();            
         }
@@ -49,7 +50,8 @@ function pontos(){
     textSize(25);
     fill(color(255,240,60));
     text(meusPontos, width / 4, 26);
-    if (yAtor < 10){
+    if (yAtor < 12){
+        somPonto.play();
         meusPontos++;
         voltarPosicaoInicial();
     }
