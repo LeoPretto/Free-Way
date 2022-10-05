@@ -13,16 +13,19 @@ function ator(){
 
 function movimentaAtor(){
 addEventListener("keydown", function(event) {
-        teclado = event.keyCode;
+    teclado = event.keyCode;
 })  
 addEventListener("keyup", function(event){
     teclado = 0
 }) 
     if (teclado == 38){
-        yAtor -= 3;
+        yAtor -= 2;
     }
     if (teclado == 40){
-        yAtor += 3;
+        yAtor += 2;
+    }
+    if (yAtor > 366){
+        yAtor = 366;
     }
 }
 
@@ -32,13 +35,13 @@ function vercolisao(){
         colisao = collideRectCircle(xCarros[i], yCarros[i], comprimentoCarro, alturaCarro, xAtor, yAtor, 15)
         if(colisao){
             voltarPosicaoInicial();
+            pontosPositivos();            
         }
     }
 }
 
 function voltarPosicaoInicial(){
         yAtor = 366;
-        yAtor = yAtor;
 }
 
 function pontos(){
@@ -46,8 +49,14 @@ function pontos(){
     textSize(25);
     fill(color(255,240,60));
     text(meusPontos, width / 4, 26);
-    if (yAtor < 12){
+    if (yAtor < 10){
         meusPontos++;
         voltarPosicaoInicial();
     }
+}
+
+function pontosPositivos(){
+    if(meusPontos > 0){
+        meusPontos--;
+    }    
 }
