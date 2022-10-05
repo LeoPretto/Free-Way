@@ -10,4 +10,5 @@ function draw(){
     mostraCarros();
     movimentaCarro();
     movimentaAtor();
+    vercolisao();
 }

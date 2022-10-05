@@ -3,7 +3,7 @@
 
 let yAtor = 366;
 let xAtor = 100;
-
+let colisao = false;
 let teclado;
 
 function ator(){
@@ -25,4 +25,18 @@ function movimentaAtor(){
     if (teclado == 32){
         yAtor = yAtor;
     }
+}
+
+function vercolisao(){
+    //colideRectCircle (x1,y1 width1, heigth1, cx, cy, diameter)
+    for (let i = 0; i < imgCarros.length; i++){
+        colisao = collideRectCircle(xCarros[i], yCarros[i], comprimentoCarro, alturaCarro, xAtor, yAtor, 15)
+        if (colisao){
+            colidiu();
+        }
+    }
+}
+
+function colidiu(){
+    yAtor = 366;
 }
