@@ -11,4 +11,5 @@ function draw(){
     movimentaCarro();
     movimentaAtor();
     vercolisao();
+    pontos();
 }
